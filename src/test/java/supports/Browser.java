@@ -78,4 +78,13 @@ public class Browser {
     public static void click(How by, String locator){
         find(by, locator).click();
     }
+
+    public static void check(How how, String locator){
+        if(!find(how,locator).isSelected())
+            click(how, locator);
+    }
+    public static void uncheck(How how, String locator){
+        if(find(how,locator).isSelected())
+            click(how, locator);
+    }
 }
