@@ -1,3 +1,5 @@
+package LocateElements;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
