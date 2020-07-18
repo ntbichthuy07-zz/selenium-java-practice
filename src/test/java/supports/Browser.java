@@ -81,6 +81,10 @@ public class Browser {
         find(by, locator).click();
     }
 
+    public static void backToPreviousPage(){
+        driver.navigate().back();
+    }
+
     public static void check(How how, String locator){
         if(!find(how,locator).isSelected())
             click(how, locator);

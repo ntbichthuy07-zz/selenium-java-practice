@@ -1,7 +1,6 @@
 package LocateElements;
 
-import static supports.Browser.openBrowser;
-import static supports.Browser.visit;
+import static supports.Browser.*;
 
 public class BasicAuthenticationTest {
     public static void main(String[] args) {
