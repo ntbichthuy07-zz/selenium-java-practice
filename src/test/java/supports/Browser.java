@@ -1,6 +1,5 @@
 package supports;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -72,9 +72,11 @@ public class Browser {
     public static WebElement find(How by, String locator) {
         return driver.findElement(by.buildBy(locator));
     }
+
     public static void fill(How by, String locator, String withText){
         find(by, locator).sendKeys(withText);
     }
+
     public static void click(How by, String locator){
         find(by, locator).click();
     }
@@ -83,8 +85,26 @@ public class Browser {
         if(!find(how,locator).isSelected())
             click(how, locator);
     }
+
     public static void uncheck(How how, String locator){
         if(find(how,locator).isSelected())
             click(how, locator);
     }
+
+    public static void select(How how, String locator, int byIndex){
+        Select dropdown = new Select(find(how, locator));
+        dropdown.selectByIndex(byIndex);
+    }
+
+    public static void select(How how, String locator, String value){
+        Select dropdown = new Select(find(how, locator));
+        dropdown.selectByValue(value);
+    }
+
+    public static void selectByVisibleText(How how, String locator, String visibleText){
+        Select dropdown = new Select(find(how, locator));
+        dropdown.selectByVisibleText(visibleText);
+    }
+
+
 }
