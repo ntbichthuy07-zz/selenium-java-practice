@@ -4,7 +4,7 @@ import org.openqa.selenium.support.How;
 
 import static supports.Browser.*;
 
-public class jsAlertsTest {
+public class JsAlertsTest {
     public static void main(String[] args) {
         openBrowser("Chrome");
         visit("https://the-internet.herokuapp.com/javascript_alerts");
