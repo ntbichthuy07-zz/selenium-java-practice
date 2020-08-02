@@ -1,4 +1,4 @@
-package LocateElements;
+package locateElements;
 import org.openqa.selenium.support.How;
 
 import static supports.Browser.*;

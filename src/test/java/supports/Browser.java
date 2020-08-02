@@ -19,6 +19,9 @@ public class Browser {
     private static WebDriver driver;
     //Selenimum owner method
 
+    public static WebDriver getDriver(){
+        return driver;
+    }
     public static void openBrowser(String name) {
         switch (name.toLowerCase()) {
             case "chrome":

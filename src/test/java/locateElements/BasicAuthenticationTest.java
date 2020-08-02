@@ -1,4 +1,4 @@
-package LocateElements;
+package locateElements;
 
 import static supports.Browser.*;
 
