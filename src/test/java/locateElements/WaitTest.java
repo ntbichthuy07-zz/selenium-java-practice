@@ -12,7 +12,7 @@ public class WaitTest {
         openBrowser("Chrome");
         visit("https://the-internet.herokuapp.com/dynamic_loading/1");
 
-        click(How.XPATH,"//button[.='Start']");
-        System.out.println(getText(How.ID,"finish"));
+        click(How.XPATH, "//button[.='Start']");
+        System.out.println(getText(How.ID, "finish"));
     }
 }

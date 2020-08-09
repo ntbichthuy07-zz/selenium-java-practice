@@ -16,6 +16,4 @@ public class BodyMassIndexTest {
         System.out.println("Result: " + calculatorPage.getResult());
 
     }
-
-
 }

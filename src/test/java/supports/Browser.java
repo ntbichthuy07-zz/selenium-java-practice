@@ -85,9 +85,10 @@ public class Browser {
     }
 
     public static void fill(How by, String locator, String withText) {
-        find(by,locator).clear();
+        find(by, locator).clear();
         find(by, locator).sendKeys(withText);
     }
+
     public static void fill(By by, String withText) {
         driver.findElement(by).clear();
         driver.findElement(by).sendKeys(withText);
@@ -96,6 +97,7 @@ public class Browser {
     public static void click(How by, String locator) {
         find(by, locator).click();
     }
+
     public static void click(By by) {
         driver.findElement(by).click();
     }
@@ -150,6 +152,7 @@ public class Browser {
                 )
                 .getText();
     }
+
     public static String getText(By by) {
         return wait
                 .until(

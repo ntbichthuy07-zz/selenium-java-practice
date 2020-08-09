@@ -17,7 +17,7 @@ public class BmiCalculatorPage extends LoadableComponent<BmiCalculatorPage> {
     }
 
     @Override
-    protected void load(){
+    protected void load() {
         visit("https://www.calculator.net/bmi-calculator.html");
     }
 
@@ -36,35 +36,35 @@ public class BmiCalculatorPage extends LoadableComponent<BmiCalculatorPage> {
      * _LBL : --> label
      */
 
-    @FindBy(xpath ="//a[.='Metric Units']" )
+    @FindBy(xpath = "//a[.='Metric Units']")
     WebElement metricTab;
 
-    @FindBy(id ="cage" )
+    @FindBy(id = "cage")
     WebElement ageTxt;
 
-    @FindBy(id ="csex1" )
+    @FindBy(id = "csex1")
     WebElement maleRad;
 
-    @FindBy(id ="csex2" )
+    @FindBy(id = "csex2")
     WebElement femaleRad;
 
-    @FindBy(id ="cheightmeter" )
+    @FindBy(id = "cheightmeter")
     WebElement heightTxt;
 
-    @FindBy(id ="ckg" )
+    @FindBy(id = "ckg")
     WebElement weightTxt;
 
-    @FindBy(xpath ="//input[@alt='Calculate']")
+    @FindBy(xpath = "//input[@alt='Calculate']")
     WebElement calculateBtn;
 
-    @FindBy(className ="bigtext")
+    @FindBy(className = "bigtext")
     WebElement resultLbl;
 
-    public  void selectMetricTab() {
+    public void selectMetricTab() {
         metricTab.click();
     }
 
-    public  void fillForm(String age, String gender, String height, String weight) {
+    public void fillForm(String age, String gender, String height, String weight) {
 
         ageTxt.clear();
         ageTxt.sendKeys(age);
@@ -81,7 +81,7 @@ public class BmiCalculatorPage extends LoadableComponent<BmiCalculatorPage> {
         calculateBtn.click();
     }
 
-    public  String getResult() {
+    public String getResult() {
         return resultLbl.getText();
     }
 }
