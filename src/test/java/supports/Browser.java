@@ -1,5 +1,6 @@
 package supports;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,18 +11,24 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Browser {
     private static WebDriver driver;
-    //Selenimum owner method
+    //Selenium owner method
 
-    public static WebDriver getDriver(){
+    private static final int TIME_OUT_IN_SECONDS = 60;
+    public static WebDriverWait wait;
+
+    public static WebDriver getDriver() {
         return driver;
     }
+
     public static void openBrowser(String name) {
         switch (name.toLowerCase()) {
             case "chrome":
@@ -39,6 +46,7 @@ public class Browser {
             default:
                 throw new IllegalArgumentException("The browser " + name + "does not support");
         }
+        wait = new WebDriverWait(getDriver(), TIME_OUT_IN_SECONDS);
     }
 
     public static void openHeadlessBrowser(String name) {
@@ -76,58 +84,78 @@ public class Browser {
         return driver.findElement(by.buildBy(locator));
     }
 
-    public static void fill(How by, String locator, String withText){
+    public static void fill(How by, String locator, String withText) {
+        find(by,locator).clear();
         find(by, locator).sendKeys(withText);
     }
-
-    public static void click(How by, String locator){
-        find(by, locator).click();
+    public static void fill(By by, String withText) {
+        driver.findElement(by).clear();
+        driver.findElement(by).sendKeys(withText);
     }
 
-    public static void backToPreviousPage(){
+    public static void click(How by, String locator) {
+        find(by, locator).click();
+    }
+    public static void click(By by) {
+        driver.findElement(by).click();
+    }
+
+    public static void backToPreviousPage() {
         driver.navigate().back();
     }
 
-    public static void check(How how, String locator){
-        if(!find(how,locator).isSelected())
+    public static void check(How how, String locator) {
+        if (!find(how, locator).isSelected())
             click(how, locator);
     }
 
-    public static void uncheck(How how, String locator){
-        if(find(how,locator).isSelected())
+    public static void uncheck(How how, String locator) {
+        if (find(how, locator).isSelected())
             click(how, locator);
     }
 
-    public static void select(How how, String locator, int byIndex){
+    public static void select(How how, String locator, int byIndex) {
         Select dropdown = new Select(find(how, locator));
         dropdown.selectByIndex(byIndex);
     }
 
-    public static void select(How how, String locator, String value){
+    public static void select(How how, String locator, String value) {
         Select dropdown = new Select(find(how, locator));
         dropdown.selectByValue(value);
     }
 
-    public static void selectByVisibleText(How how, String locator, String visibleText){
+    public static void selectByVisibleText(How how, String locator, String visibleText) {
         Select dropdown = new Select(find(how, locator));
         dropdown.selectByVisibleText(visibleText);
     }
 
-    public static void acceptAlert(){
+    public static void acceptAlert() {
         driver.switchTo().alert().accept();
     }
 
-    public static void acceptAlert(String withText){
+    public static void acceptAlert(String withText) {
         driver.switchTo().alert().sendKeys(withText);
         driver.switchTo().alert().accept();
     }
 
-    public static void dismissAlert(){
+    public static void dismissAlert() {
         driver.switchTo().alert().dismiss();
     }
 
-    public static String getText(How how, String locator){
-        return find(how, locator).getText();
+    public static String getText(How how, String locator) {
+        return wait
+                .until(
+                        ExpectedConditions
+                                .visibilityOfElementLocated(how.buildBy(locator))
+                )
+                .getText();
     }
-
+    public static String getText(By by) {
+        return wait
+                .until(
+                        ExpectedConditions
+                                .visibilityOfElementLocated(by)
+                )
+                .getText();
+    }
 }
