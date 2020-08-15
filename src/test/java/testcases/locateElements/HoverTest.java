@@ -1,4 +1,4 @@
-package locateElements;
+package testcases.locateElements;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.How;

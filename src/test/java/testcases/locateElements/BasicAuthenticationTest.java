@@ -1,4 +1,4 @@
-package locateElements;
+package testcases.locateElements;
 
 import static supports.Browser.*;
 

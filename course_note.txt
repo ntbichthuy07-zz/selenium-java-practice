@@ -229,5 +229,21 @@ level 3: @FindBy
  public  void selectMetricTab() {
         metricTab.click();
     }
+=====================================================
+day-8
+framework: 
+data driven: cai du lieu quyet dinh framework chạy ntn=> csv, json to chuc du lieu, muc dich tai su dung test case voi bo du lieu khac nhau, input va ouput deu là data
+keyword driven: excel, key + data
+modular  (cucumber k phai tao ra de cho automation mà giúp team làm việc dễ dàng hơn dựa trên user story) code hoan toan dùng unit test (TDD test driven development, BDD: behavior driven development
+hybird
+
+object = page
+module =function
+libraries = test
+
+bmi testplan.xml: how to create test suite
+
+surefi report: to report
+mvn clean test
 
 

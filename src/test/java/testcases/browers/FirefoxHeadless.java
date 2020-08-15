@@ -1,4 +1,4 @@
-package browers;
+package testcases.browers;
 
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;

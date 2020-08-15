@@ -1,6 +1,5 @@
-package locateElements;
+package testcases.locateElements;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
 import static supports.Browser.*;

@@ -152,7 +152,6 @@ public class Browser {
                 )
                 .getText();
     }
-
     public static String getText(By by) {
         return wait
                 .until(
