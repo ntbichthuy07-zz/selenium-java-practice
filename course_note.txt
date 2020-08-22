@@ -108,7 +108,7 @@ folder test -> packgae: browers -> class: OpenChrome -> function: OpenChrome
 build -> error log: Error:java: error: release version 5 not supported -> fix: https://dev.to/techgirl1908/intellij-error-java-release-version-5-not-supported-376
 
 -----------------------------------------------
-day 3:
+day=3:
 Open broswers
 C1: find the webdriver.exe to code 
 add path: System.setProperty("webdriver.gecko.driver","drivers\\geckodriver.exe");
@@ -132,7 +132,7 @@ setSize(), getSize() for mobile mode, chrome can use mobile, ie firefox
 ----carbon.now.sh, makeup code to present
 
 -----------------------------------------------------------------------------------
-day4
+day=4
 Array vs List
 array: tuan tu trong 1 vung bo nho
 list: luu nhieu cho nho trong bo nho
@@ -178,7 +178,7 @@ Crtl + Alt + L: reformat code
 
 
 -------------------------------------
-day-5
+day=5
 static testing vs dynamic testing
 =gán
 == so sánh
@@ -192,7 +192,7 @@ static testing vs dynamic testing
 123457890	/.,zxccvbnmlkjhgffdsaqwertyuiop[{\112334431455778!@#$%&&*()+=
 
 --------------------------------------------
-day-6
+day=6
 
 container: object chua cac gia tri : bien, gia tri
 stream() java8 => chuoi, mang
@@ -201,6 +201,7 @@ spageti
 
 coding convention, 
 design parten ->  team disscus
+
 ======================================================
 day=7
 https://www.guru99.com/implicit-explicit-waits-selenium.html
@@ -229,6 +230,7 @@ level 3: @FindBy
  public  void selectMetricTab() {
         metricTab.click();
     }
+	
 =====================================================
 day-8
 framework: 
@@ -238,12 +240,36 @@ modular  (cucumber k phai tao ra de cho automation mà giúp team làm việc d�
 hybird
 
 object = page
-module =function
-libraries = test
+function = thư vien ke thua thu page = object
+data dynamic > code trong supports (fake data, random data) db query, api
+data static > data package: user account
+nghi tới data truoc khi nghi toi test case
+
 
 bmi testplan.xml: how to create test suite
 
 surefi report: to report
 mvn clean test
 
+========================================================
+day-9
 
+Alt+1-7
+
+Alt+7: show method
+debug
+run method = class
+https://prnt.sc/u3tmnb
+tes plan name: browser_scope_evn.xml .EX: ie_smoke_dev.xml
+
+3 dang testcase: 
+thuoc feature nao
+smoke or regresstion
+evn
+SOLID trong software development
+
+mvn -Dtestplan=sample-testplan test
+
+https://testng.org/doc/documentation-main.html
+
+batch > win, mac, linux: sh file chua command to run 
