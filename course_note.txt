@@ -266,6 +266,7 @@ tes plan name: browser_scope_evn.xml .EX: ie_smoke_dev.xml
 thuoc feature nao
 smoke or regresstion
 evn
+group de filter feature, scope, evn
 SOLID trong software development
 
 mvn -Dtestplan=sample-testplan test
@@ -273,3 +274,20 @@ mvn -Dtestplan=sample-testplan test
 https://testng.org/doc/documentation-main.html
 
 batch > win, mac, linux: sh file chua command to run 
+
+regexr.com
+
+suite > test > class... group > method
+class toi da 30 testcases > break test suite 1,2,3,4
+
+before class, mo broeser login tung acc khac nhau
+
+hook testNG, 1 bong hoa, moi canh hoa co 2 dau ra and vo (before/after)
+
+=> testNG provide a templete to write testcases
+
+parametr
+data provider
+run parralel cac test
+
+

@@ -1,14 +1,15 @@
 <suite name="demo">
     <parameter name="url" value="https://www.calculator.net/bmi-calculator.html"/>
-    <parameter name="browser" value="chrome"/>
-    <test name="run on ie">
-        <groups>
-            <run>
-                <exclude name="ie"/>
-            </run>
-        </groups>
-        <packages>
-            <package name="testcases"/>
-        </packages>
+    <test name="run annotations on ie">
+        <parameter name="browser" value="ie"/>
+        <classes>
+            <class name="testcases.SampleTestSuite"/>
+        </classes>
+    </test>
+    <test name="run annotations on chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testcases.SampleTestSuite"/>
+        </classes>
     </test>
 </suite>

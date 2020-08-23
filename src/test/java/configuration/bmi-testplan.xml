@@ -6,20 +6,5 @@
             <class name="testcases.BodyMassIndexTest"/>
         </classes>
     </test>
-
-    <test name="Metric Unit test on Firefox">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="testcases.BodyMassIndexTest"/>
-        </classes>
-    </test>
-
-    <test name="Metric Unit test on IE">
-        <parameter name="browser" value="ie"/>
-        <classes>
-            <class name="testcases.BodyMassIndexTest"/>
-        </classes>
-    </test>
-
 </suite>
 
