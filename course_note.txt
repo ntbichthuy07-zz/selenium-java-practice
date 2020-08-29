@@ -1,0 +1,344 @@
+day=1
+wifi: testingvn-room1
+automation: viet phan mem de test phan mem vs manual: truc tiep
+
+auto vs manual are skill not caarer path
+manual: giảm sự khách quan (làm nhiều -> quen mắt -> bỏ qua step), giảm sự chán nản
+giá trị manual đến nhanh hơn -> đc nhìn nhận 
+
+
+automation: 
+test case: lặp đi lặp lại: smoke, sanity suite, regresstion
+perfome, chạy màn hình 72h
+
+no case: new, change request -> có thể đáp ưng = AI 
+adhoc
+
+automation process
+
+browesr: system under test, lõi muốn làm (web=> chọn tool thích hợp(level code, thuận lợi) -> tìm hiểu product, team làm việc tốt nhất: điều khiển tự động ứng dụng (selenium/Cypress/Jest) -> chọn ngôn ngữ lập trình => testing tool: số hóa công việc (testNG) -> inteliji, -> quản lý code: Git lab, hub -> CI: run code tự động, test build, report
+Git, CI: dev team provide
+
+netflix: cannot selenium -> xd 4K, HD
+google map: cannot selenium -> hình ảnh 
+
+test theo chiều dọc, làm nhiều trên cái nào 
+uat
+system: functional test 1 tool, perfomance 1 tool
+intergation: api ->  tool 
+unit
+
+càng lên cao tiền càng tăng, thời gian tăng, sự thay đổi càng lớn (FE) lỗi k đổi (BE)
+càng xuống dưới số lượng testcase càng tăng
+càng mở rộng càng giảm tiền
+
+automation can chiếm 50% (google: 46,x%)
+
+test phải có BA logic, dev code, kỹ năng viết test
+
+=> nhìn software theo chiều sâu. see on: softwaretestingtool.com
+test lân cận -> test trường hợp cụ thể -> test the world => xác định khả năng đi xa caarer path
+framwork: đổi data -> dạng khách
+data drivene: 1 code tái sd cho nhiều database
+keyword driven -> viết trên excel -> thả vô framwork run -> tái sd cho dự án khác 100%, k pk gì về test, khó nhất build
+modular: khó thứ 2 to build, viết bằng file lập trình, đc sd nhiều kết hợp vs hybird
+hybrid: lai data or moduler: cucumber
+
+level code:
+Record/playback: nhìn ra tool hoạt động ntn, phù hợp vs phần mềm -> k sd thực: record chưa chắc chạy
+linear scripts: viết trên 1 file -> k sd thực tế
+structure: thành 1 framwork to tái sd
+data driven: 1 case nhiều data. Ex password invalid -> nhiều data
+keyword: viết test case trên excel = dev
+process > dev: unit -> system -> UAT -> stagin -> rollout: = BA, PO
+model: viết bussienes flow: charts logic -> general số lượng testcase cần; testcases = design hệ thống -> chi phối dev, process, k còn khái niệm test thay vào flow: Spotify use to graphWalker: viết code, k viết testcase
+
+block chain: kênh nhị phân, k sửa đc
+AI machine: đưa kỹ năng của 1 ng thành phần mềm, tái sd cho nhiều ng
+
+sercurity nắm  top ten of... 
+
+Skill set:
+xác định: write a software to test software or test a software
+testing skill: dĩ bất biến ứng vạn biến
+1. design testcase, see ISTQB, pair wire, state, bounacries, bug LC (thấy bugs cho đến khi pass), SLC: định hướng 
+2. coding skill: basic, OOP, Git basic (add commit, put), Git flow (brand request), syntax (coding convention): tối da ký tự tên hàm
+3. 
+
+
+Selenium: 
+
+1. webdriver: viết scripts
+2. IDE
+3. Grid: phân bổ test đó run
+toto 4: api
+
+to browesr (củ hành) lack api getway -> chợ đen -> selenium k support
+
+youtue: selenium conference, selenium camp, test automation university: hd làm từng bước
+
+testguide: technique mới
+
+==================================================================
+day=2
+jdk: develop string, array
+cmd: java -version: check java runtime environment
+		javac: java compiler
+		javac --version
+System variables: (not user 
+JAVA_HOME: java is virtual machine chạy trên nền máy chủ
+path: %JAVA_HOME%\bin
+
+the path in the top is higher priority  
+
+maven: is a build tool, quản gia cho 1 prj java -> nếu k có build tool phải dùn command line
+quản lý thư viện cần sd
+build theo cách mình muốn: package, run website (.Net, application, javascript: package.json
+ruby, python: scripting language -> nhanh học, dễ viết nhưng 
+java: ngôn ngữ lập trình, chặt cấu trúc complie nhanh nhất but chiếm bộ nhât nhất
+DSL: làm domain cụ thể như selenimum
+
+
+-----------
+add dependencies -> reload Maven
+
+Creata Java prj with templete -> add Framework support: Maven / create maven prj
+add dependencies: selenimum
+folder test -> packgae: browers -> class: OpenChrome -> function: OpenChrome
+build -> error log: Error:java: error: release version 5 not supported -> fix: https://dev.to/techgirl1908/intellij-error-java-release-version-5-not-supported-376
+
+-----------------------------------------------
+day=3:
+Open broswers
+C1: find the webdriver.exe to code 
+add path: System.setProperty("webdriver.gecko.driver","drivers\\geckodriver.exe");
+
+c2: add dependencies: maven webdrivermanager
+add function: WebDriverManager.firefoxdriver().setup();
+
+c3: add webdriver.exe to C:\Windows\System32
+no need to add more code
+
+
+Headless:
+chụp hình, k quay phim
+dùng rất nhiều để chạy trên cloud, virtual machine, docker test tầng functional
+k mất time render code, chỉ cần lấy html 
+
+resuse cookie
+driver.manage().window().maximize(); //=fullscreen(); 
+setSize(), getSize() for mobile mode, chrome can use mobile, ie firefox
+
+----carbon.now.sh, makeup code to present
+
+-----------------------------------------------------------------------------------
+day=4
+Array vs List
+array: tuan tu trong 1 vung bo nho
+list: luu nhieu cho nho trong bo nho
+k the khoi tao mang rongx but list canbe
+hashmap, json: get by key, anh xa
+enum: kieu du lieu tu minh dat ra (nay trong tuan, thang trong nam) dieu hien nhien
+class, interface, enum
+abstract:ke thua -> final:hang so
+interface vs instant
+interface vs abstract
+object: dai dien cho json, class, enum
+
+AI: O mũ n, thuật toán
+
+git: cong cu phuong thuc quanly code -> ung dung = jira thu nho, keep tract, pull code, road map
+github: public = inteliji
+gitlab: = eclipse
+
+first time:
+git: add existing project
+folder project: git bash
+git init 
+git remote add origin https://github.com/ntbichthuy07/selenium-java-practice.git
+git status
+git add . chỉ sd lần đầu
+git status
+git commit -m "init project"
+git status
+git push -u origin master
+git config --global user.email "ntbichthuy07@gmail.com"
+git config --global user.name "Nguyen Thi Bich Thuy"
+
+repeat
+create new branch: git checkout -b day-5
+git status
+
+git add
+git commit -m "message"
+git push -u origin day-5
+
+Command line instructions
+You can also upload existing files from your computer using the instructions below.
+
+
+Git global setup
+git config --global user.name "Bich-Thuy Nguyen-Thi"
+git config --global user.email "bich-thuy.nguyen-thi@ekino.com"
+
+Create a new repository
+git clone git@gitlab.ekino.com:bich-thuy.nguyen-thi/apc4-automation.git
+cd apc4-automation
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Push an existing folder
+cd existing_folder
+git init
+git remote add origin git@gitlab.ekino.com:bich-thuy.nguyen-thi/apc4-automation.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Push an existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@gitlab.ekino.com:bich-thuy.nguyen-thi/apc4-automation.git
+git push -u origin --all
+git push -u origin --tags
+
+Ctl+D: duplicate row
+Crtl + Alt + L: reformat code
+
+
+-------------------------------------
+day=5
+static testing vs dynamic testing
+=gán
+== so sánh
+=== kieu va gia tri
+'' char
+"" regular string, tham so Ex: %s
+'''
+. directory
+.. parent
+...van van :)))
+123457890	/.,zxccvbnmlkjhgffdsaqwertyuiop[{\112334431455778!@#$%&&*()+=
+
+--------------------------------------------
+day=6
+
+container: object chua cac gia tri : bien, gia tri
+stream() java8 => chuoi, mang
+boilerplate code java8 => API -> lamda, schema
+spageti
+
+coding convention, 
+design parten ->  team disscus
+
+======================================================
+day=7
+https://www.guru99.com/implicit-explicit-waits-selenium.html
+wait: handle test flow, chon doi tuong can cho, dang cho > cho get text: load lai value
+page oject model
+POM: UB, ES
+1 doi tuong: phuong thuc +thuoc tinh
+dinh nghia phuong thuc truoc doi tuong
+
+level 1: String 
+private final String METRIX_TAB = "//a[.='Metric Units']";
+
+=>  public  void selectMetricTab() {
+      click(HOW.XPATH, METRIX_TAB);
+    }
+	
+level 2: By 
+private By metricTab = By.xpath("//a[.='Metric Units']");
+ public  void selectMetricTab() {
+      click(metricTab);
+    }
+	
+level 3: @FindBy
+@FindBy(xpath ="//a[.='Metric Units']" )
+    WebElement metricTab;
+ public  void selectMetricTab() {
+        metricTab.click();
+    }
+	
+=====================================================
+day-8
+framework: 
+data driven: cai du lieu quyet dinh framework chạy ntn=> csv, json to chuc du lieu, muc dich tai su dung test case voi bo du lieu khac nhau, input va ouput deu là data
+keyword driven: excel, key + data
+modular  (cucumber k phai tao ra de cho automation mà giúp team làm việc dễ dàng hơn dựa trên user story) code hoan toan dùng unit test (TDD test driven development, BDD: behavior driven development
+hybird
+
+object = page
+function = thư vien ke thua thu page = object
+data dynamic > code trong supports (fake data, random data) db query, api
+data static > data package: user account
+nghi tới data truoc khi nghi toi test case
+
+
+bmi testplan.xml: how to create test suite
+
+surefi report: to report
+mvn clean test
+
+========================================================
+day-9
+
+Alt+1-7
+
+Alt+7: show method
+debug
+run method = class
+https://prnt.sc/u3tmnb
+tes plan name: browser_scope_evn.xml .EX: ie_smoke_dev.xml
+
+3 dang testcase: 
+thuoc feature nao
+smoke or regresstion
+evn
+group de filter feature, scope, evn
+SOLID trong software development
+
+mvn -Dtestplan=sample-testplan test
+
+https://testng.org/doc/documentation-main.html
+
+batch > win, mac, linux: sh file chua command to run 
+
+regexr.com
+
+suite > test > class... group > method
+class toi da 30 testcases > break test suite 1,2,3,4
+
+before class, mo broeser login tung acc khac nhau
+
+hook testNG, 1 bong hoa, moi canh hoa co 2 dau ra and vo (before/after)
+
+=> testNG provide a templete to write testcases
+
+parametr
+data provider
+
+
+==========================================
+day=10
+
+record/playback
+linear scripts
+structure scripts
+data driven testing
+keyword driven tesing
+process driven tesing
+model based tesing
+
+chup hinh neu failed
+
+test chay tung evn
+class chay dung feature
+method chay tung testcase
+https://testng.org/doc/documentation-main.html#parallel-running => trong thuc te khong nen dung cach nay 
+
+chay song song. devop docker, network, selenium split
+
+Allure Framework https://docs.qameta.io/allure/#_testng

@@ -1,0 +1,14 @@
+<suite name="login" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="supports.ExcelReport"/>
+    </listeners>
+    <test name="Chrome">
+        <parameter name="browser" value="chrome">
+            <classes>
+                <class name="testcases.locateElements.LoginTest"/>
+            </classes>
+        </parameter>
+
+    </test>
+
+</suite>

@@ -1,0 +1,10 @@
+<suite name="Body Mass Index Suite">
+    <parameter name="url" value="https://www.calculator.net/bmi-calculator.html"/>
+    <test name="Metric Unit test on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testcases.BodyMassIndexTest"/>
+        </classes>
+    </test>
+</suite>
+
