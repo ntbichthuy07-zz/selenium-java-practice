@@ -159,7 +159,7 @@ git remote add origin https://github.com/ntbichthuy07/selenium-java-practice.git
 git status
 git add . chỉ sd lần đầu
 git status
-git commit - m "init project"
+git commit -m "init project"
 git status
 git push -u origin master
 git config --global user.email "ntbichthuy07@gmail.com"
@@ -172,6 +172,37 @@ git status
 git add
 git commit -m "message"
 git push -u origin day-5
+
+Command line instructions
+You can also upload existing files from your computer using the instructions below.
+
+
+Git global setup
+git config --global user.name "Bich-Thuy Nguyen-Thi"
+git config --global user.email "bich-thuy.nguyen-thi@ekino.com"
+
+Create a new repository
+git clone git@gitlab.ekino.com:bich-thuy.nguyen-thi/apc4-automation.git
+cd apc4-automation
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Push an existing folder
+cd existing_folder
+git init
+git remote add origin git@gitlab.ekino.com:bich-thuy.nguyen-thi/apc4-automation.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Push an existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@gitlab.ekino.com:bich-thuy.nguyen-thi/apc4-automation.git
+git push -u origin --all
+git push -u origin --tags
 
 Ctl+D: duplicate row
 Crtl + Alt + L: reformat code
@@ -288,6 +319,26 @@ hook testNG, 1 bong hoa, moi canh hoa co 2 dau ra and vo (before/after)
 
 parametr
 data provider
-run parralel cac test
 
 
+==========================================
+day=10
+
+record/playback
+linear scripts
+structure scripts
+data driven testing
+keyword driven tesing
+process driven tesing
+model based tesing
+
+chup hinh neu failed
+
+test chay tung evn
+class chay dung feature
+method chay tung testcase
+https://testng.org/doc/documentation-main.html#parallel-running => trong thuc te khong nen dung cach nay 
+
+chay song song. devop docker, network, selenium split
+
+Allure Framework https://docs.qameta.io/allure/#_testng

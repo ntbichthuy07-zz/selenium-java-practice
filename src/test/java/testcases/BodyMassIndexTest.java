@@ -32,7 +32,6 @@ public class BodyMassIndexTest {
 
         };
     }
-
     @Test(description = "Validate bmi calculator in metric unit", dataProvider = "bmiTestdata")
     public static void perform(String age, String gender, String height, String weight, String expectedResult) {
         BmiCalculatorFunction calculatorPage = new BmiCalculatorFunction();
